@@ -1,6 +1,6 @@
 Name:		texlive-churchslavonic
-Version:	42751
-Release:	2
+Version:	67474
+Release:	1
 Summary:	Typeset documents in Church Slavonic language using Unicode
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/churchslavonic
