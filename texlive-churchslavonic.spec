@@ -3,7 +3,7 @@ Version:	67474
 Release:	1
 Summary:	Typeset documents in Church Slavonic language using Unicode
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/churchslavonic
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/churchslavonic
 License:	mit
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.doc.r%{version}.tar.xz
