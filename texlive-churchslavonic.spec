@@ -1,38 +1,30 @@
-Name:		texlive-churchslavonic
-Version:	67474
-Release:	1
+%global tl_name churchslavonic
+%global tl_revision 67474
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.2.4
+Release:	%{tl_revision}.1
 Summary:	Typeset documents in Church Slavonic language using Unicode
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/churchslavonic
+URL:		https://www.ctan.org/tex-archive/language/churchslavonic
 License:	mit
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(etoolbox)
+Requires:	texlive(fonts-churchslavonic)
+Requires:	texlive(hyphen-churchslavonic)
+Requires:	texlive(oberdiek)
+Requires:	texlive(xcolor)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides fonts, hyphenation patterns, and
-supporting macros to typeset Church Slavonic texts. It depends
-on the following other packages: fonts-churchslavonic,
-hyph-utf8, intcalc, etoolbox, and xcolor.
+The package provides fonts, hyphenation patterns, and supporting macros
+to typeset Church Slavonic texts. It depends on the following other
+packages: fonts-churchslavonic, hyph-utf8, intcalc, etoolbox, and
+xcolor.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/churchslavonic
-%doc %{_texmfdistdir}/doc/latex/churchslavonic
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
