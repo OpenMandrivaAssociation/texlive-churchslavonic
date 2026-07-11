@@ -13,8 +13,6 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/churchslavonic.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(etoolbox)
 Requires:	texlive(fonts-churchslavonic)
 Requires:	texlive(hyphen-churchslavonic)
